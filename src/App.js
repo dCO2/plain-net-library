@@ -1,6 +1,9 @@
 import React from 'react';
 import './App.css';
 import Navbar from './components/Navbar';
+import Home from './components/pages/Home';
+import Search from './components/pages/Search';
+import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 
 const App = () => {
 
@@ -9,10 +12,10 @@ const App = () => {
       <React.Fragment>
         <Navbar/>
         <div className='container'>
-          <Switch>
-            <Route exact path="/" component={Home} />
-            <Route exact path="/search" component={Search} />
-          </Switch>
+          <Routes>
+            <Route path='/' element={<Home/>} />
+            <Route path='/search' element={<Search/>} />
+          </Routes>
         </div>
       </React.Fragment>
     </Router>
