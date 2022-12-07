@@ -1,9 +1,12 @@
 import React from 'react';
+import { useBookItemContext } from './BookItemContext';
 
 const BookItem = ({book}) => {
   const {id, volumeInfo} = book;
   const {title, authors, imageLinks} = volumeInfo;
   const {thumbnail} = imageLinks;
+  const {addBookToUserLibrary} = useBookItemContext();
+
 
   // const dropdownMenu = (
   //   <div>
@@ -20,9 +23,9 @@ const BookItem = ({book}) => {
   return(
     <>
       <p>title: {title}</p>
-      <p>author: {authors[0]}</p>
+      <p>author: {authors?authors[0]:""}</p>
       <img src={thumbnail} alt={id}></img>
-      {/* <button onclick="changedisplaydropdownMenutoTrue"></button> */}
+      <button onClick={() => addBookToUserLibrary(book, "read")}>Add Book To Read</button>
     </>
   )
 }
