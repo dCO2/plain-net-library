@@ -1,6 +1,8 @@
 import React, {useEffect} from 'react';
 import { useBookItemContext } from "../BookItemContext";
 import BookItem from "../BookItem";
+import {Link} from "react-router-dom";
+
 import SearchBar from '../SearchBar';
 import SearchPageResults from '../SearchPageResults';
 
@@ -24,6 +26,7 @@ const Search = () => {
 
   return(
     <>
+    <Link to="/">Home</Link>
     {BookList}
     </>
     // <div>

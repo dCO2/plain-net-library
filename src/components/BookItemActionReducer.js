@@ -10,7 +10,7 @@ export default (state, action) => {
 				action.payload
 				];
 		case MOVE_BOOK:
-			return state.map(book => (book.id == action.payload.id)? action.payload: book);
+			return state.map(book => (book.id === action.payload.id)? action.payload: book);
     case DELETE_BOOK:
       return state.filter(book => book.id !== action.payload.id);
     default:

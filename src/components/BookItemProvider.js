@@ -17,7 +17,7 @@ function BookItemProvider(props){
 
   const apiParamsQuery = "flowers"
   const apiParamFilter = "free-ebooks"
-  const apiParamMaxResults = 1
+  const apiParamMaxResults = 10
   const apiParamKey = "AIzaSyA0qHnVgE_9Vu3qxX2k_9A8vIdTEhALQXw"
   const API = "https://www.googleapis.com/books/v1/volumes?q="+
               apiParamsQuery+"&filter="+apiParamFilter+"&maxResults="+
@@ -37,10 +37,7 @@ function BookItemProvider(props){
   };
 
   const addBookToUserLibrary = (book, toShelf) => {
-    console.log("added");
     book.shelf = toShelf;
-    console.log(book);
-    console.log(state);
     dispatch({
       type: ADD_BOOK,
       payload: book
