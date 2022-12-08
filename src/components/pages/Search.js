@@ -27,7 +27,9 @@ const Search = () => {
   return(
     <>
     <Link to="/">Home</Link>
-    {BookList}
+    <div className='search-result'>
+      {BookList}
+    </div>
     </>
     // <div>
     //   <SearchBar/>

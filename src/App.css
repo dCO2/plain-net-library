@@ -2,6 +2,31 @@
   text-align: center;
 }
 
+.card {
+  display: flex;
+  width: 384px;
+  height: 230px;
+  padding: 1em;
+  margin: 1em;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.bg-light  {
+  background-color: #fff8e7;
+}
+
+.card-left {
+  flex: 1;
+}
+
+.card-right {
+  flex: 2;
+}
+
+.search-result div{
+  float: left;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;

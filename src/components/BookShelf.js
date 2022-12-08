@@ -5,6 +5,10 @@ import BookItem from "./BookItem";
 const BookShelf = ({shelf}) => {
 
   const {state, loading, getQueriedApiLibrary} = useBookItemContext();
+  const readingHeader = <h3><i>Reading</i> SHELF</h3>;
+  const readHeader = <h3><i>Read</i> SHELF</h3>;
+  const tobereadHeader = <h3><i>To Be Read</i> SHELF</h3>;
+
   let BookList = <div></div>;
 
   if(loading){
@@ -17,6 +21,9 @@ const BookShelf = ({shelf}) => {
 
   return(
     <>
+    {shelf==='reading'?readingHeader:<></>}
+    {shelf==='to-be-read'?tobereadHeader:<></>}
+    {shelf==='read'?readHeader:<></>}
     {BookList}
     </>
   );
