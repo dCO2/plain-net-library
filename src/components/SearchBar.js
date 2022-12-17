@@ -2,7 +2,7 @@ import { useBookItemContext } from "./BookItemContext";
 
 const SearchBar = () => {
 
-  const {apiParamsQuery, setApiParamsQuery, getQueriedApiLibrary} = useBookItemContext();
+  const {setApiParamsQuery, getQueriedApiLibrary} = useBookItemContext();
 
   return(
     <div className="search-bar">

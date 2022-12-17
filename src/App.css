@@ -157,10 +157,6 @@ body{
   justify-content: center;
 }
 
-.search-result div{
-  /* float: left; */
-}
-
 @media only screen and (max-width: 872px){
   .alt-navbar-title{
     visibility: visible;

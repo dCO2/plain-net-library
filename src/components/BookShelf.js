@@ -1,10 +1,10 @@
-import React, {useEffect} from "react";
+import React from "react";
 import { useBookItemContext } from "./BookItemContext";
 import BookItem from "./BookItem";
 
 const BookShelf = ({shelf}) => {
 
-  const {state, loading, getQueriedApiLibrary} = useBookItemContext();
+  const {state, loading} = useBookItemContext();
   const readingHeader = <h2 style={{fontWeight:"normal"}}> Reading SHELF</h2>;
   const readHeader = <h2 style={{fontWeight:"normal"}}>Read SHELF</h2>;
   const tobereadHeader = <h2 style={{fontWeight:"normal"}}>To Be Read SHELF</h2>;
