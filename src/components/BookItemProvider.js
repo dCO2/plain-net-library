@@ -18,7 +18,7 @@ function BookItemProvider(props){
   const [state, dispatch] = useReducer(BookItemActionReducer, initialUserLibrary);
   const [loading, setLoading] = useState(true);
 
-  const apiParamKey = "AIzaSyA0qHnVgE_9Vu3qxX2k_9A8vIdTEhALQXw"
+  const apiParamKey = process.env.REACT_APP_API_KEY;
   const API = "https://www.googleapis.com/books/v1/volumes?q="+
               apiParamsQuery+"&filter="+apiParamFilter+"&maxResults="+
               apiParamMaxResults+"&key="+apiParamKey;
