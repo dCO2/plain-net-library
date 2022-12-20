@@ -2,7 +2,7 @@ export const ADD_BOOK = "ADD_BOOK";
 export const MOVE_BOOK = "MOVE_BOOK";
 export const DELETE_BOOK = "DELETE_BOOK";
 
-export default (state, action) => {
+const BookItemActionReducer = (state, action) => {
 	switch(action.type){
 		case ADD_BOOK:
 			return [
@@ -17,3 +17,5 @@ export default (state, action) => {
       return state;
   }
 };
+
+export default BookItemActionReducer;
